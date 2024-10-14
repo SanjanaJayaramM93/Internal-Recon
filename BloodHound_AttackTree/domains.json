@@ -1,0 +1,471 @@
+{
+  "nodes": [
+    {
+      "id": 3,
+      "type": "Group",
+      "label": "DOMAIN ADMINS@SJLAB.LOCAL",
+      "props": {
+        "highvalue": true,
+        "domain": "SJLAB.LOCAL",
+        "name": "DOMAIN ADMINS@SJLAB.LOCAL",
+        "description": "Designated administrators of the domain",
+        "admincount": true,
+        "distinguishedname": "CN=DOMAIN ADMINS,OU=GROUP,DC=SJLAB,DC=LOCAL",
+        "whencreated": 1714098440,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-512",
+        "samaccountname": "Domain Admins"
+      },
+      "glyphs": {
+        "0": {
+          "position": "top-right",
+          "font": "\"Font Awesome 5 Free\"",
+          "content": "",
+          "fillColor": "black",
+          "fontScale": 1.5,
+          "fontStyle": "900"
+        }
+      },
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 1910,
+      "y": 436.5,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-512",
+      "highvalue": true,
+      "type_group": true,
+      "size": 5,
+      "degree": 5,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#DBE617"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    },
+    {
+      "id": 13,
+      "type": "User",
+      "label": "ADMINISTRATOR@SJLAB.LOCAL",
+      "props": {
+        "highvalue": false,
+        "sidhistory": {},
+        "passwordnotreqd": false,
+        "description": "Built-in account for administering the computer/domain",
+        "sensitive": false,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "unconstraineddelegation": false,
+        "pwdneverexpires": true,
+        "enabled": true,
+        "samaccountname": "Administrator",
+        "hasspn": false,
+        "owned": false,
+        "pwdlastset": 1714096707,
+        "domain": "SJLAB.LOCAL",
+        "lastlogon": 1728657453,
+        "trustedtoauth": false,
+        "name": "ADMINISTRATOR@SJLAB.LOCAL",
+        "admincount": true,
+        "serviceprincipalnames": {},
+        "whencreated": 1714098555,
+        "distinguishedname": "CN=ADMINISTRATOR,CN=USERS,DC=SJLAB,DC=LOCAL",
+        "lastlogontimestamp": 1728437158,
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-500",
+        "dontreqpreauth": false
+      },
+      "glyphs": {},
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 0,
+      "y": 436.5,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-500",
+      "notowned": true,
+      "highvalue": false,
+      "type_user": true,
+      "size": 1,
+      "degree": 1,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#17E625"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    },
+    {
+      "id": 14,
+      "type": "User",
+      "label": "SQLSERVICE@SJLAB.LOCAL",
+      "props": {
+        "sidhistory": {},
+        "description": "Password is Password@1",
+        "unconstraineddelegation": false,
+        "pwdneverexpires": true,
+        "enabled": true,
+        "hasspn": true,
+        "trustedtoauth": false,
+        "serviceprincipalnames": {
+          "0": "WS2K19-DC01/SQLService.sjlab.local:6011"
+        },
+        "admincount": true,
+        "whencreated": 1714713847,
+        "lastlogontimestamp": -1,
+        "highvalue": false,
+        "passwordnotreqd": false,
+        "sensitive": false,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "samaccountname": "SQLService",
+        "owned": false,
+        "displayname": "SQL Service",
+        "pwdlastset": 1714713847,
+        "domain": "SJLAB.LOCAL",
+        "lastlogon": 0,
+        "name": "SQLSERVICE@SJLAB.LOCAL",
+        "distinguishedname": "CN=SQL SERVICE,CN=USERS,DC=SJLAB,DC=LOCAL",
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-1120",
+        "dontreqpreauth": false
+      },
+      "glyphs": {},
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 0,
+      "y": 218.25,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-1120",
+      "notowned": true,
+      "highvalue": false,
+      "type_user": true,
+      "size": 1,
+      "degree": 1,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#17E625"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    },
+    {
+      "id": 15,
+      "type": "User",
+      "label": "TONYSTARK@SJLAB.LOCAL",
+      "props": {
+        "highvalue": false,
+        "sidhistory": {},
+        "passwordnotreqd": false,
+        "sensitive": false,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "unconstraineddelegation": false,
+        "pwdneverexpires": true,
+        "enabled": true,
+        "samaccountname": "tonystark",
+        "hasspn": false,
+        "owned": false,
+        "displayname": "Tony Stark",
+        "pwdlastset": 1714725274,
+        "domain": "SJLAB.LOCAL",
+        "lastlogon": 0,
+        "trustedtoauth": false,
+        "name": "TONYSTARK@SJLAB.LOCAL",
+        "serviceprincipalnames": {},
+        "admincount": true,
+        "whencreated": 1714725274,
+        "distinguishedname": "CN=TONY STARK,CN=USERS,DC=SJLAB,DC=LOCAL",
+        "lastlogontimestamp": -1,
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-1121",
+        "dontreqpreauth": false
+      },
+      "glyphs": {},
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 0,
+      "y": 0,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-1121",
+      "notowned": true,
+      "highvalue": false,
+      "type_user": true,
+      "size": 1,
+      "degree": 1,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#17E625"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    },
+    {
+      "id": 41,
+      "type": "User",
+      "label": "PETERPARKER@SJLAB.LOCAL",
+      "props": {
+        "highvalue": false,
+        "sidhistory": {},
+        "passwordnotreqd": false,
+        "sensitive": false,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "unconstraineddelegation": false,
+        "pwdneverexpires": false,
+        "enabled": true,
+        "samaccountname": "PeterParker",
+        "hasspn": false,
+        "owned": false,
+        "displayname": "Peter Parker",
+        "pwdlastset": 0,
+        "domain": "SJLAB.LOCAL",
+        "lastlogon": 0,
+        "trustedtoauth": false,
+        "name": "PETERPARKER@SJLAB.LOCAL",
+        "serviceprincipalnames": {},
+        "admincount": true,
+        "whencreated": 1714541478,
+        "distinguishedname": "CN=PETER,CN=USERS,DC=SJLAB,DC=LOCAL",
+        "lastlogontimestamp": -1,
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-1111",
+        "dontreqpreauth": false
+      },
+      "glyphs": {},
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 0,
+      "y": 873,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-1111",
+      "notowned": true,
+      "highvalue": false,
+      "type_user": true,
+      "size": 1,
+      "degree": 1,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#17E625"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    },
+    {
+      "id": 106,
+      "type": "User",
+      "label": "JAMES@SJLAB.LOCAL",
+      "props": {
+        "highvalue": false,
+        "sidhistory": {},
+        "passwordnotreqd": false,
+        "sensitive": false,
+        "domainsid": "S-1-5-21-3034082449-3561192587-619946949",
+        "unconstraineddelegation": false,
+        "pwdneverexpires": true,
+        "enabled": true,
+        "samaccountname": "james",
+        "hasspn": false,
+        "owned": false,
+        "displayname": "James D.",
+        "pwdlastset": 1728578596,
+        "domain": "SJLAB.LOCAL",
+        "lastlogon": 0,
+        "trustedtoauth": false,
+        "name": "JAMES@SJLAB.LOCAL",
+        "admincount": true,
+        "distinguishedname": "CN=JAMES D.,CN=USERS,DC=SJLAB,DC=LOCAL",
+        "whencreated": 1728578596,
+        "serviceprincipalnames": {},
+        "lastlogontimestamp": -1,
+        "objectid": "S-1-5-21-3034082449-3561192587-619946949-1127",
+        "dontreqpreauth": false
+      },
+      "glyphs": {},
+      "folded": {
+        "nodes": {},
+        "edges": {}
+      },
+      "x": 0,
+      "y": 654.75,
+      "objectid": "S-1-5-21-3034082449-3561192587-619946949-1127",
+      "notowned": true,
+      "highvalue": false,
+      "type_user": true,
+      "size": 1,
+      "degree": 1,
+      "icon": {
+        "font": "'Font Awesome 5 Free'",
+        "content": "",
+        "scale": 1.5,
+        "color": "#17E625"
+      },
+      "dagre_x": null,
+      "dagre_y": null
+    }
+  ],
+  "edges": [
+    {
+      "id": 624,
+      "etype": "MemberOf",
+      "source": 15,
+      "target": 3,
+      "label": "MemberOf",
+      "size": 1,
+      "points": {
+        "0": {
+          "x": 0,
+          "y": 0
+        },
+        "1": {
+          "x": 25,
+          "y": 0
+        },
+        "2": {
+          "x": 50,
+          "y": 100
+        }
+      },
+      "hover": false
+    },
+    {
+      "id": 625,
+      "etype": "MemberOf",
+      "source": 14,
+      "target": 3,
+      "label": "MemberOf",
+      "size": 1,
+      "points": {
+        "0": {
+          "x": 0,
+          "y": 50
+        },
+        "1": {
+          "x": 25,
+          "y": 50
+        },
+        "2": {
+          "x": 50,
+          "y": 100
+        }
+      }
+    },
+    {
+      "id": 626,
+      "etype": "MemberOf",
+      "source": 13,
+      "target": 3,
+      "label": "MemberOf",
+      "size": 1,
+      "points": {
+        "0": {
+          "x": 0,
+          "y": 100
+        },
+        "1": {
+          "x": 25,
+          "y": 100
+        },
+        "2": {
+          "x": 50,
+          "y": 100
+        }
+      }
+    },
+    {
+      "id": 948,
+      "etype": "MemberOf",
+      "source": 106,
+      "target": 3,
+      "label": "MemberOf",
+      "size": 1,
+      "points": {
+        "0": {
+          "x": 0,
+          "y": 150
+        },
+        "1": {
+          "x": 25,
+          "y": 150
+        },
+        "2": {
+          "x": 50,
+          "y": 100
+        }
+      },
+      "hover": false
+    },
+    {
+      "id": 949,
+      "etype": "MemberOf",
+      "source": 41,
+      "target": 3,
+      "label": "MemberOf",
+      "size": 1,
+      "points": {
+        "0": {
+          "x": 0,
+          "y": 200
+        },
+        "1": {
+          "x": 25,
+          "y": 200
+        },
+        "2": {
+          "x": 50,
+          "y": 100
+        }
+      }
+    }
+  ],
+  "spotlight": {
+    "3": [
+      "DOMAIN ADMINS@SJLAB.LOCAL",
+      0,
+      "",
+      "Group",
+      ""
+    ],
+    "13": [
+      "ADMINISTRATOR@SJLAB.LOCAL",
+      0,
+      "",
+      "User",
+      ""
+    ],
+    "14": [
+      "SQLSERVICE@SJLAB.LOCAL",
+      0,
+      "",
+      "User",
+      ""
+    ],
+    "15": [
+      "TONYSTARK@SJLAB.LOCAL",
+      0,
+      "",
+      "User",
+      ""
+    ],
+    "41": [
+      "PETERPARKER@SJLAB.LOCAL",
+      0,
+      "",
+      "User",
+      ""
+    ],
+    "106": [
+      "JAMES@SJLAB.LOCAL",
+      0,
+      "",
+      "User",
+      ""
+    ]
+  }
+}
