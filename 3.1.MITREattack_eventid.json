@@ -1,0 +1,145 @@
+{
+    "T1003": [
+        {
+            "event_id": "4624",
+            "description": "An account was successfully logged on.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4672",
+            "description": "Special privileges assigned to new logon.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4688",
+            "description": "A new process has been created.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4776",
+            "description": "Credentials validated on the domain controller.",
+            "criticality": "Low"
+        }
+    ],
+    "T1078": [
+        {
+            "event_id": "4624",
+            "description": "An account was successfully logged on.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4634",
+            "description": "An account was logged off.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4648",
+            "description": "Logon attempt using explicit credentials.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4776",
+            "description": "Credentials validated on the domain controller.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4625",
+            "description": "An account failed to log on.",
+            "criticality": "Low"
+        }
+    ],
+    "T1110": [
+        {
+            "event_id": "4625",
+            "description": "An account failed to log on.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4776",
+            "description": "Credentials validated on the domain controller.",
+            "criticality": "Low"
+        }
+    ],
+    "T1550": [
+        {
+            "event_id": "4768",
+            "description": "A Kerberos authentication ticket (TGT) requested.",
+            "criticality": "Medium"
+        },
+        {
+            "event_id": "4769",
+            "description": "A Kerberos service ticket was requested.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4770",
+            "description": "A Kerberos service ticket was renewed.",
+            "criticality": "Low"
+        }
+    ],
+    "T1203": [
+        {
+            "event_id": "4688",
+            "description": "A new process has been created.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4662",
+            "description": "An operation was performed on an object.",
+            "criticality": "Low"
+        }
+    ],
+    "T1070": [
+        {
+            "event_id": "4662",
+            "description": "An operation was performed on an object.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4688",
+            "description": "A new process has been created.",
+            "criticality": "Low"
+        }
+    ],
+    "T1087": [
+        {
+            "event_id": "4625",
+            "description": "An account failed to log on.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4799",
+            "description": "A security-enabled local group membership enumerated.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4769",
+            "description": "A Kerberos service ticket was requested.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "5379",
+            "description": "User Account Management.",
+            "criticality": "Medium"
+        }
+    ],
+    "T1201": [
+        {
+            "event_id": "5379",
+            "description": "User Account Management.",
+            "criticality": "Medium"
+        }
+    ],
+    "T1133": [
+        {
+            "event_id": "4648",
+            "description": "Logon attempt using explicit credentials.",
+            "criticality": "Low"
+        },
+        {
+            "event_id": "4624",
+            "description": "An account was successfully logged on.",
+            "criticality": "Low"
+        }
+    ]
+}

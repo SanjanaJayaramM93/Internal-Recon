@@ -1,0 +1,167 @@
+[
+    {
+        "id": "hypothesis-1",
+        "hypothesis": "The account 'SQLService' has weak credentials and is a member of 'CN=Group Policy Creator Owners,OU=Group,DC=sjlab,DC=local', making it a prime target for credential dumping and lateral movement.",
+        "mitre_techniques": [
+            "T1003"
+        ],
+        "attack_tree_focus": "Credential Dumping",
+        "severity": "High",
+        "evidence": "Account 'SQLService' has weak credentials.",
+        "date_created": "2024-10-14T07:57:38.594053+00:00"
+    },
+    {
+        "id": "hypothesis-2",
+        "hypothesis": "Kerberos errors suggest time synchronization issues, which could be exploited for replay attacks and indicate potential misconfigurations in the Kerberos authentication process.",
+        "mitre_techniques": [
+            "T1550"
+        ],
+        "attack_tree_focus": "Use Alternate Authentication Material",
+        "severity": "Medium",
+        "evidence": "Kerberos error indicates time skew.",
+        "date_created": "2024-10-14T07:57:38.594053+00:00"
+    },
+    {
+        "id": "hypothesis-3",
+        "hypothesis": "The domain password policy allows weak passwords with a minimum length of 7 characters and a maximum password age of 41 days 23 hours 53 minutes, increasing the risk of brute-force attacks.",
+        "mitre_techniques": [
+            "T1201"
+        ],
+        "attack_tree_focus": "Password Policy Discovery",
+        "severity": "Medium",
+        "evidence": "Password Policy: Minimum Length = 7, Maximum Age = 41 days 23 hours 53 minutes.",
+        "date_created": "2024-10-14T07:57:38.595045+00:00"
+    },
+    {
+        "id": "hypothesis-4",
+        "hypothesis": "The account 'Guest' has never had a password set, indicating a potential vulnerability for unauthorized access.",
+        "mitre_techniques": [
+            "T1078"
+        ],
+        "attack_tree_focus": "Valid Accounts",
+        "severity": "High",
+        "evidence": "Account 'Guest' has never had a password set.",
+        "date_created": "2024-10-14T07:57:38.596077+00:00"
+    },
+    {
+        "id": "hypothesis-5",
+        "hypothesis": "Multiple accounts, such as Guest, lab.user1, lab.user2, PeterParker, brucewayne, dianaprince, misconfig, have never had passwords set, indicating a risk of enumeration and unauthorized access.",
+        "mitre_techniques": [
+            "T1087"
+        ],
+        "attack_tree_focus": "Account Discovery",
+        "severity": "Medium",
+        "evidence": "Several accounts have never had passwords set.",
+        "date_created": "2024-10-14T07:57:38.596077+00:00"
+    },
+    {
+        "id": "hypothesis-6",
+        "hypothesis": "The system 'WS2K19-DC01' was targeted for a ZeroLogon attack, but the failure indicates that it may be patched or protected against this vulnerability.",
+        "mitre_techniques": [
+            "T1203"
+        ],
+        "attack_tree_focus": "Exploitation for Client Execution",
+        "severity": "High",
+        "evidence": "System targeted for ZeroLogon vulnerability.",
+        "date_created": "2024-10-14T07:57:38.597163+00:00"
+    },
+    {
+        "id": "hypothesis-7",
+        "hypothesis": "While SMBv1 is disabled on 'WS2K19-DC01', the system remains susceptible to potential exploits due to other vulnerabilities in SMB configuration.",
+        "mitre_techniques": [
+            "T1070"
+        ],
+        "attack_tree_focus": "Indicator Removal on Host",
+        "severity": "Medium",
+        "evidence": "SMBv1 disabled, but vulnerabilities detected in scan.",
+        "date_created": "2024-10-14T07:57:38.597163+00:00"
+    },
+    {
+        "id": "hypothesis-8",
+        "hypothesis": "The presence of multiple accounts with never-set passwords indicates potential user account enumeration, which attackers may exploit to gain unauthorized access.",
+        "mitre_techniques": [
+            "T1087"
+        ],
+        "attack_tree_focus": "Account Discovery",
+        "severity": "Medium",
+        "evidence": "Multiple accounts found without passwords.",
+        "date_created": "2024-10-14T07:57:38.598162+00:00"
+    },
+    {
+        "id": "hypothesis-9",
+        "hypothesis": "The account 'SQLService' has a recent password that may be vulnerable to password spraying techniques if it is widely known.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "Recent password for 'SQLService' could be vulnerable to password spraying.",
+        "date_created": "2024-10-14T07:57:38.598162+00:00"
+    },
+    {
+        "id": "hypothesis-10",
+        "hypothesis": "With several user accounts having weak or no passwords, there is an increased risk of lateral movement within the network once initial access is gained.",
+        "mitre_techniques": [
+            "T1078"
+        ],
+        "attack_tree_focus": "Valid Accounts",
+        "severity": "High",
+        "evidence": "Multiple accounts with weak or no passwords increase lateral movement risk.",
+        "date_created": "2024-10-14T07:57:38.600396+00:00"
+    },
+    {
+        "id": "hypothesis-11",
+        "hypothesis": "The absence of an account lockout threshold increases the susceptibility of user accounts to brute-force attacks.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "No account lockout threshold defined.",
+        "date_created": "2024-10-14T07:57:38.600396+00:00"
+    },
+    {
+        "id": "hypothesis-12",
+        "hypothesis": "Problems with LDAP connectivity may suggest misconfigurations or vulnerabilities in the domain that could be exploited.",
+        "mitre_techniques": [
+            "T1133"
+        ],
+        "attack_tree_focus": "External Remote Services",
+        "severity": "Medium",
+        "evidence": "Errors in LDAP connectivity suggest potential vulnerabilities.",
+        "date_created": "2024-10-14T07:57:38.601370+00:00"
+    },
+    {
+        "id": "hypothesis-13",
+        "hypothesis": "Membership in 'Group Policy Creator Owners' for the 'SQLService' account increases the risk of unauthorized changes to Group Policy Objects, potentially affecting the entire domain.",
+        "mitre_techniques": [
+            "T1078"
+        ],
+        "attack_tree_focus": "Valid Accounts",
+        "severity": "High",
+        "evidence": "Account 'SQLService' is a member of a high-privilege group.",
+        "date_created": "2024-10-14T07:57:38.601370+00:00"
+    },
+    {
+        "id": "hypothesis-14",
+        "hypothesis": "The account 'Administrator' has a weak or commonly used password, making it highly vulnerable to brute-force or dictionary attacks.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "The 'Administrator' account has a password 'Test@123', which is considered weak",
+        "date_created": "2024-10-14T07:57:38.601370+00:00"
+    },
+    {
+        "id": "hypothesis-15",
+        "hypothesis": "The SPN 'WS2K19-DC01/SQLService.sjlab.local:6011' indicates that the 'SQLService' account could be vulnerable to Kerberoasting due to its recent password change.",
+        "mitre_techniques": [
+            "T1550"
+        ],
+        "attack_tree_focus": "Use Alternate Authentication Material",
+        "severity": "Medium",
+        "evidence": "Recent password change for 'SQLService' indicates potential Kerberoasting vulnerability.",
+        "date_created": "2024-10-14T07:57:38.601370+00:00"
+    }
+]

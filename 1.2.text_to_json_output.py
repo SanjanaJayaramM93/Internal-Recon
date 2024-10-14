@@ -176,11 +176,11 @@ def parse_text_file(filename):
 
 
 # Reading from the input text file and writing the JSON output to a file
-filename = "recon_output.txt"
+filename = "1.1.Internalrecon_output.txt"
 output = parse_text_file(filename)
 
 # Save output as JSON
-with open("outputJSON.json", "w") as json_file:
+with open("1.3.InternalReconOutput.json", "w") as json_file:
     json.dump(output, json_file, indent=4)
 
 # Print JSON output for inspection

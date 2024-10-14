@@ -1,0 +1,34 @@
+Id,TaskDisplayName,Count
+4624,Logon,2306
+4672,Special Logon,2219
+4634,Logoff,2203
+5379,User Account Management,233
+4776,Credential Validation,144
+4799,Security Group Management,104
+4769,Kerberos Service Ticket Operations,41
+4742,Computer Account Management,35
+4648,Logon,32
+4662,Directory Service Access,25
+4688,Process Creation,22
+4768,Kerberos Authentication Service,18
+5059,Other System Events,8
+5061,System Integrity,7
+5058,Other System Events,7
+4770,Kerberos Service Ticket Operations,6
+4728,Security Group Management,5
+4625,Logon,5
+4737,Security Group Management,3
+4826,Other Policy Change Events,2
+5033,Other System Events,2
+5024,Other System Events,2
+4904,Audit Policy Change,2
+4902,Audit Policy Change,2
+4696,Process Creation,2
+4616,Security State Change,2
+4756,Security Group Management,2
+4608,Security State Change,2
+4738,User Account Management,2
+1101,Event processing,2
+4717,Authentication Policy Change,1
+4755,Security Group Management,1
+4718,Authentication Policy Change,1

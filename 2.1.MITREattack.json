@@ -1,0 +1,110 @@
+[
+    {
+        "MITRE Technique": "T1003",
+        "Attack Tree Focus": "Credential Dumping",
+        "Keywords": ["weak credentials", "password", "username", "hash"],
+        "Severity": "High"
+    },
+    {
+        "MITRE Technique": "T1201",
+        "Attack Tree Focus": "Password Policy Discovery",
+        "Keywords": ["weak password policy", "policy", "requirements", "complexity"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1078",
+        "Attack Tree Focus": "Valid Accounts",
+        "Keywords": ["guest account","lateral movement","Group policy privileges" ,"unauthorized guest access", "user", "privilege", "enumeration"],
+        "Severity": "High"
+    },
+    {
+        "MITRE Technique": "T1203",
+        "Attack Tree Focus": "Exploitation for Client Execution",
+        "Keywords": ["zerologon vulnerability", "exploit", "vulnerability", "SMB", "remote code execution"],
+        "Severity": "High"
+    },
+    {
+        "MITRE Technique": "T1070",
+        "Attack Tree Focus": "Indicator Removal on Host",
+        "Keywords": ["smb configuration risks", "cleanup", "evidence", "traces"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1087",
+        "Attack Tree Focus": "Account Discovery",
+        "Keywords": ["user accounts no passwords", "account enumeration", "enumeration", "user"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1110",
+        "Attack Tree Focus": "Brute Force",
+        "Keywords": ["Brute Force", "lockout policy","weak admin credentials", "password", "attempt", "login", "credentials"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1133",
+        "Attack Tree Focus": "External Remote Services",
+        "Keywords": ["ldap configuration", "remote", "connection", "service"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1055",
+        "Attack Tree Focus": "Process Injection",
+        "Keywords": ["process", "injection", "code"],
+        "Severity": "High"
+    },
+    {
+        "MITRE Technique": "T1550",
+        "Attack Tree Focus": "Use Alternate Authentication Material",
+        "Keywords": ["kerberos issues","kerberoasting vulnerability", "ticket", "authentication"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1016",
+        "Attack Tree Focus": "System Network Configuration Discovery",
+        "Keywords": ["network", "configuration", "discovery"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1640",
+        "Attack Tree Focus": "Data Staged",
+        "Keywords": ["data", "exfiltration", "transfer"],
+        "Severity": "High"
+    },
+    {
+        "MITRE Technique": "T1641",
+        "Attack Tree Focus": "Data Encrypted",
+        "Keywords": ["data", "encryption", "protection"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1040",
+        "Attack Tree Focus": "Network Sniffing",
+        "Keywords": ["network", "traffic", "capture"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1547",
+        "Attack Tree Focus": "Startup Item",
+        "Keywords": ["persistence", "startup", "execute"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1202",
+        "Attack Tree Focus": "Application Layer Protocol",
+        "Keywords": ["protocol", "communication", "application"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1135",
+        "Attack Tree Focus": "Remote Services",
+        "Keywords": ["remote", "services", "access"],
+        "Severity": "Medium"
+    },
+    {
+        "MITRE Technique": "T1071",
+        "Attack Tree Focus": "Application Layer Protocol",
+        "Keywords": ["application", "protocol", "command"],
+        "Severity": "Medium"
+    }
+]

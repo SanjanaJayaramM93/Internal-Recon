@@ -5,7 +5,7 @@ from termcolor import colored
 
 # Function to write output to a text file
 def write_to_file(content):
-    with open('recon_output.txt', 'a') as f:
+    with open('1.1.Internalrecon_output.txt', 'a') as f:
         f.write(content + '\n')
 
 ############## Kerberoasting ######################
