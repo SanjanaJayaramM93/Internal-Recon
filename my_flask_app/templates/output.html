@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconnaissance Output</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Removed the .output-container class */
+        pre {
+            background-color: transparent; /* Make background transparent */
+            padding: 10px; /* Adjust padding as needed */
+            border: none; /* Remove border */
+            overflow: auto;
+            white-space: pre-wrap; /* Enable wrapping */
+            word-wrap: break-word; /* Handle long words */
+            font-size: 1.1em; /* Slightly increase the font size */
+            line-height: 1.5; /* Increase line height for better readability */
+            margin: 0; /* Remove default margin */
+        }
+
+        strong {
+            font-weight: bold; /* Make strong text bold */
+            color: #000; /* Set strong text color */
+        }
+
+        em {
+            font-style: italic; /* Italicize emphasized text */
+            color: #555; /* Set color for emphasized text */
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold; /* Make the link text bold */
+            text-align: center; /* Center align text */
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Reconnaissance Output</h1>
+    <pre>
+        {% for line in output %}
+            {{ line }}
+        {% endfor %}
+    </pre>
+    <a href="{{ url_for('home') }}">Go Back</a>
+</body>
+</html>
+
+

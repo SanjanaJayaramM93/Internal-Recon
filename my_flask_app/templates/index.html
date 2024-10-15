@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Internal Reconnaissance Tool</title>
+    <script>
+        function highlightSection(section) {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(sec => sec.classList.remove('highlight'));
+            section.classList.add('highlight');
+        }
+
+        async function generateHypotheses() {
+            const response = await fetch('/generate-hypotheses', { 
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({}) // Send any required data if needed
+            });
+
+            if (response.ok) {
+                const hypotheses = await response.json();
+                displayHypotheses(hypotheses);
+            } else {
+                console.error('Error generating hypotheses');
+                document.getElementById('hypothesis-output').innerHTML = '<p>Error generating hypotheses. Please try again.</p>';
+            }
+        }
+
+        function displayHypotheses(hypotheses) {
+            const outputDiv = document.getElementById('hypothesis-output');
+            outputDiv.innerHTML = ''; // Clear previous output
+
+            hypotheses.forEach(hypothesis => {
+                const card = document.createElement('div');
+                card.className = 'hypothesis-card'; // Apply card styling
+
+                card.innerHTML = `
+                    <h3>${hypothesis.entry}</h3>
+                    <p><strong>ID:</strong> ${hypothesis.id}</p>
+                    <p><strong>MITRE Techniques:</strong> ${hypothesis.techniques.join(', ')}</p>
+                    <p><strong>Focus:</strong> ${hypothesis.attack_tree_focus}</p>
+                    <p><strong>Severity:</strong> ${hypothesis.severity}</p>
+                    <p><strong>Evidence:</strong> ${hypothesis.evidence}</p>
+                    <p><strong>Date Created:</strong> ${new Date(hypothesis.date_created).toLocaleString()}</p>
+                `;
+                outputDiv.appendChild(card);
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <h1>Internal Reconnaissance Tool</h1>
+    </header>
+
+    <main>
+        <section id="internal-recon">
+            <h2>Internal Reconnaissance</h2>
+            <form action="/internal-recon" method="post">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+                
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                
+                <label for="domain">Domain</label>
+                <input type="text" name="domain" id="domain" required>
+                
+                <label for="ip">IP Address</label>
+                <input type="text" name="ip" id="ip" required>
+                
+                <label for="scope">Scope</label>
+                <input type="text" name="scope" id="scope" required>
+                
+                <button type="submit">Run Internal Recon</button>
+            </form>
+        </section>
+
+        <section id="attack-tree">
+            <h2>Attack Tree Generator</h2>
+            <div class="button-container">
+                <button onclick="window.location.href='/attack-tree'">Generate Attack Tree</button>
+            </div>
+        </section>
+
+        <section id="hypothesis-generator">
+            <h2>Hypothesis Generator</h2>
+            <form action="/generate_hypotheses" method="post">
+                <div class="button-container">
+                    <button type="submit">Generate Hypotheses</button>
+                </div>
+            </form>
+            
+            <h3>Generated Hypotheses Output:</h3>
+            <div id="hypothesis-output">
+                {% if hypotheses %}
+                    <ul>
+                        {% for hypothesis in hypotheses %}
+                            <li>
+                                <strong>ID:</strong> {{ hypothesis.id }}<br>
+                                <strong>Hypothesis:</strong> {{ hypothesis.hypothesis }}<br>
+                                <strong>MITRE Techniques:</strong> {{ hypothesis.mitre_techniques | join(', ') }}<br>
+                                <strong>Attack Tree Focus:</strong> {{ hypothesis.attack_tree_focus }}<br>
+                                <strong>Severity:</strong> {{ hypothesis.severity }}<br>
+                                <strong>Evidence:</strong> {{ hypothesis.evidence }}<br>
+                                <strong>Date Created:</strong> {{ hypothesis.date_created }}<br>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No hypotheses generated yet.</p>
+                {% endif %}
+            </div>
+        </section>
+        
+
+        <section id="hypothesis-validation">
+            <h2>Hypothesis Validation</h2>
+            <form action="/validate_hypotheses" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="logfile">Upload Log Summary CSV:</label>
+                    <input type="file" id="logfile" name="logfile" accept=".csv">
+                </div>
+                <div class="button-container">
+                    <button type="submit">Validate Hypotheses</button>
+                </div>
+            </form>
+            
+            <h3>Validation Results:</h3>
+            <div id="validation-output">
+                {% if updated_hypotheses %}
+                    <ul>
+                        {% for hypothesis in updated_hypotheses %}
+                            <li>
+                                <strong>ID:</strong> {{ hypothesis.id }}<br>
+                                <strong>Hypothesis:</strong> {{ hypothesis.hypothesis }}<br>
+                                <strong>Validation:</strong>
+                                <ul>
+                                    {% for event_id, validation in hypothesis.validation.items() %}
+                                        <li>
+                                            <strong>Event ID:</strong> {{ event_id }}<br>
+                                            <strong>Description:</strong> {{ validation.description }}<br>
+                                            <strong>Count:</strong> {{ validation.count }}<br>
+                                            <strong>Criticality:</strong> {{ validation.criticality }}<br>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>No validation results yet.</p>
+                {% endif %}
+            </div>
+        </section>
+        
+
+        <section id="hypothesis-ranking">
+            <h2>Hypothesis Ranking</h2>
+            <form action="/rank" method="post">
+                <button type="submit">Rank Hypotheses</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+

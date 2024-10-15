@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Hypotheses</title>
+</head>
+<body>
+    <h1>Generated Hypotheses</h1>
+    <ul>
+        {% for hypothesis in hypotheses %}
+            <li>
+                <strong>ID:</strong> {{ hypothesis.id }}<br>
+                <strong>Hypothesis:</strong> {{ hypothesis.hypothesis }}<br>
+                <strong>MITRE Techniques:</strong> {{ hypothesis.mitre_techniques | join(', ') }}<br>
+                <strong>Attack Tree Focus:</strong> {{ hypothesis.attack_tree_focus }}<br>
+                <strong>Severity:</strong> {{ hypothesis.severity }}<br>
+                <strong>Evidence:</strong> {{ hypothesis.evidence }}<br>
+                <strong>Date Created:</strong> {{ hypothesis.date_created }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
+
+
+
+

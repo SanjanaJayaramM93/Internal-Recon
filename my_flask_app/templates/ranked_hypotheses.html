@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranked Hypotheses</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> <!-- Link to your CSS -->
+</head>
+<body>
+    <h1>Ranked Hypotheses</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Rank</th>
+                <th>Hypothesis ID</th>
+                <th>Score</th>
+                <th>Hypothesis Text</th> <!-- New column for Hypothesis Text -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for hypothesis in hypotheses %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ hypothesis.id }}</td>
+                <td>{{ hypothesis.score }}</td>
+                <td>{{ hypothesis.hypothesis }}</td> <!-- Display the hypothesis text here -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+

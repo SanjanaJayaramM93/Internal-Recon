@@ -1,0 +1,123 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #34495e;
+    padding: 20px 0;
+    background-color: #2c3e50;
+    color: white;
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #2980b9;
+    margin-bottom: 20px;
+    font-size: 1.8em; /* Increased font size */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Added text shadow */
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Smooth transition on hover */
+}
+
+form:hover {
+    transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="password"], input[type="file"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    padding: 0;
+}
+
+button {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    margin: 20px 0; /* Add some space around */
+}
+
+button:hover {
+    background-color: #1abc9c;
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Container Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 60px;
+}
+
+section h2 {
+    text-align: center;
+}
+
+/* Highlight Effect for Focused Section */
+section.highlight {
+    background-color: #e6f7ff; /* Light blue highlight */
+    border-left: 5px solid #2980b9; /* Blue left border */
+    padding: 10px; /* Padding to create space */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}

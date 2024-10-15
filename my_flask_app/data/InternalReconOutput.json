@@ -1,0 +1,156 @@
+{
+    "ServicePrincipalName": [
+      {
+        "SPN": "WS2K19-DC01/SQLService.sjlab.local:6011",
+        "Name": "SQLService",
+        "MemberOf": "CN=Group Policy Creator Owners,OU=Group,DC=sjlab,DC=local",
+        "PasswordLastSet": "2024-05-03 13:24:07.888728",
+        "LastLogon": "<never>",
+        "Delegation": null
+      }
+    ],
+    "Errors": {
+      "Kerberos": [
+        "CCache file is not found. Skipping...",
+        "Kerberos SessionError: KRB_AP_ERR_SKEW (Clock skew too great)"
+      ],
+      "DeprecationWarning": "/usr/local/bin/GetUserSPNs.py:4: DeprecationWarning: pkg_resources is deprecated as an API."
+    },
+    "Info": {
+      "DomainInfo": {
+        "AD_Domain": "sjlab.local",
+        "TGT_Status": "Failed to get Kerberos TGT. Fallback to NTLM authentication.",
+        "LDAP_Connection": "ws2k19-dc01.sjlab.local",
+        "Domains": 1,
+        "Computers": 3,
+        "Users": 15,
+        "Groups": 55,
+        "GPOs": 4,
+        "OUs": 6,
+        "Containers": 22,
+        "Trusts": 0,
+        "ComputerQueryTime": "00M 37S"
+      },
+      "Queried_Computers": [
+        "SJ-21317503-W10.sjlab.local",
+        "SJ-21317503-W7.sjlab.local",
+        "WS2K19-DC01.sjlab.local"
+      ]
+    },
+    "SMB_Scan": {
+      "Domain": "sjlab.local",
+      "Computers": [
+        {
+          "IP": "192.168.20.12",
+          "Port": 445,
+          "Hostname": "WS2K19-DC01",
+          "OS": "Windows 10 / Server 2019 Build 17763 x64",
+          "Signing": true,
+          "SMBv1": false,
+          "Users": [
+            {
+              "Username": "Administrator",
+              "LastPWSet": "2024-04-26 01:58:27",
+              "BadPW": 0,
+              "Description": "Built-in account for administering the computer/domain"
+            },
+            {
+              "Username": "Guest",
+              "LastPWSet": "<never>",
+              "BadPW": 0,
+              "Description": "Built-in account for guest access to the computer/domain"
+            },
+            {
+              "Username": "krbtgt",
+              "LastPWSet": "2024-04-26 02:27:20",
+              "BadPW": 0,
+              "Description": "Key Distribution Center Service Account"
+            },
+            {
+              "Username": "lab.user1",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "lab.user2",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "tester",
+              "LastPWSet": "2024-05-03 16:50:18",
+              "BadPW": 0
+            },
+            {
+              "Username": "hacker",
+              "LastPWSet": "2024-05-03 16:54:24",
+              "BadPW": 0
+            },
+            {
+              "Username": "PeterParker",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "brucewayne",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "dianaprince",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "misconfig",
+              "LastPWSet": "<never>",
+              "BadPW": 0
+            },
+            {
+              "Username": "SQLService",
+              "LastPWSet": "2024-05-03 05:24:07",
+              "BadPW": 0,
+              "Description": "Password is Password@1"
+            },
+            {
+              "Username": "tonystark",
+              "LastPWSet": "2024-05-03 08:34:34",
+              "BadPW": 0
+            },
+            {
+              "Username": "james",
+              "LastPWSet": "2024-10-10 16:43:16",
+              "BadPW": 0
+            }
+          ]
+        }
+      ],
+      "Password_Policy": {
+        "Minimum_Password_Length": 7,
+        "Password_History_Length": 24,
+        "Maximum_Password_Age": "41 days 23 hours 53 minutes",
+        "Password_Complexity_Flags": "000001",
+        "Domain_Refuse_Password_Change": 0,
+        "Domain_Password_Store_Cleartext": 0,
+        "Domain_Password_Lockout_Admins": 0,
+        "Domain_Password_No_Clear_Change": 0,
+        "Domain_Password_No_Anon_Change": 0,
+        "Domain_Password_Complex": 1,
+        "Minimum_Password_Age": "1 day 4 minutes",
+        "Reset_Account_Lockout_Counter": "10 minutes",
+        "Locked_Account_Duration": "10 minutes",
+        "Account_Lockout_Threshold": "None",
+        "Forced_Logoff_Time": "Not Set"
+      }
+    },
+    "Vulnerability_Scans": [
+      {
+        "Vulnerability": "ZEROLOGON",
+        "IP": "192.168.20.12",
+        "Port": 445,
+        "Hostname": "WS2K19-DC01",
+        "Result": "Attack failed. Target is probably patched."
+      }
+    ]
+  }
+  
