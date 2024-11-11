@@ -1,0 +1,142 @@
+{
+  "networkInformation": {
+    "ADDomain": "sjlab.local",
+    "KerberosAuthentication": "Failed. Falling back to NTLM authentication.",
+    "Error": "[Errno Connection error (ws2k19-dc01.sjlab.local:88)] [Errno -2] Name or service not known"
+  },
+  "ldapServerInformation": {
+    "LDAPServer": "ws2k19-dc01.sjlab.local",
+    "DomainsFound": 1,
+    "DomainsInForest": 1,
+    "ComputersFound": 3,
+    "UsersFound": 15,
+    "GroupsFound": 55,
+    "GPOsFound": 4,
+    "OrganizationalUnitsFound": 6,
+    "ContainersFound": 22,
+    "TrustsFound": 0
+  },
+  "computerEnumeration": {
+    "WorkersStarted": 10,
+    "ComputersQueried": 3,
+    "TimeTaken": "00M 19S",
+    "QueryResults": [
+      "SJ-21317503-W10.sjlab.local",
+      "SJ-21317503-W7.sjlab.local",
+      "WS2K19-DC01.sjlab.local"
+    ]
+  },
+  "smbEnumerationResults": {
+    "DetectedSMBVersionAndPlatform": {
+      "Platform": "Windows 10 / Server 2019 Build 17763 x64",
+      "Name": "WS2K19-DC01",
+      "Signing": "Enabled",
+      "SMBv1": "Disabled"
+    },
+    "credentialValidation": [
+      {
+        "User": "Administrator",
+        "Hash": "aad3b435b51404eeaad3b435b51404ee:64cbb76dcafe2e977794f6251f8231fb"
+      },
+      {
+        "User": "Guest",
+        "Hash": "aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0"
+      },
+      {
+        "User": "DefaultAccount",
+        "Hash": "aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0"
+      }
+    ],
+    "error": {
+      "SAMHashExtraction": "Failed for user WDAGUtilityAccount (No hash info available)"
+    }
+  },
+  "userAccountInformation": [
+    {
+      "Username": "Administrator",
+      "LastPasswordSet": "2024-04-26 01:58:27",
+      "BadPasswordAttempts": 0,
+      "Description": "Built-in account for administering the computer/domain"
+    },
+    {
+      "Username": "Guest",
+      "LastPasswordSet": "<never>",
+      "BadPasswordAttempts": 0,
+      "Description": "Built-in account for guest access"
+    },
+    {
+      "Username": "krbtgt",
+      "LastPasswordSet": "2024-04-26 02:27:20",
+      "BadPasswordAttempts": 0,
+      "Description": "Key Distribution Center Service Account"
+    },
+    {
+      "Username": "lab.user1",
+      "LastPasswordSet": "<never>",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    },
+    {
+      "Username": "lab.user2",
+      "LastPasswordSet": "<never>",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    },
+    {
+      "Username": "tester",
+      "LastPasswordSet": "2024-05-03 16:50:18",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    },
+    {
+      "Username": "hacker",
+      "LastPasswordSet": "2024-05-03 16:54:24",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    },
+    {
+      "Username": "SQLService",
+      "LastPasswordSet": "2024-05-03 05:24:07",
+      "BadPasswordAttempts": 0,
+      "Description": "Password: Password@1"
+    },
+    {
+      "Username": "tonystark",
+      "LastPasswordSet": "2024-05-03 08:34:34",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    },
+    {
+      "Username": "james",
+      "LastPasswordSet": "2024-10-10 16:43:16",
+      "BadPasswordAttempts": 0,
+      "Description": "-"
+    }
+  ],
+  "domainPasswordPolicyInformation": {
+    "MinimumPasswordLength": 7,
+    "PasswordHistoryLength": 24,
+    "MaximumPasswordAge": "41 days 23 hours 53 minutes",
+    "PasswordComplexityFlags": "Enabled (000001)",
+    "AccountLockoutSettings": {
+      "AccountLockoutThreshold": "None",
+      "ResetLockoutCounter": "10 minutes",
+      "LockedAccountDuration": "10 minutes",
+      "ForcedLogoffTime": "Not Set"
+    }
+  },
+  "attacksAndResults": {
+    "ZeroLogonAttack": {
+      "Attack": "ZeroLogon",
+      "Result": "Failed (Target is probably patched)"
+    },
+    "NOPACAttack": {
+      "TGTwithPAC": {
+        "Size": 1670
+      },
+      "TGTwithoutPAC": {
+        "Size": 1670
+      }
+    }
+  }
+}

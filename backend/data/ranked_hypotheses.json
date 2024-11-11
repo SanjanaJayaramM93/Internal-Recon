@@ -1,0 +1,387 @@
+[
+    {
+        "id": "hypothesis-1",
+        "hypothesis": "The account 'SQLService' has weak credentials and is a member of 'CN=Group Policy Creator Owners,OU=Group,DC=sjlab,DC=local', making it a prime target for credential dumping.",
+        "mitre_techniques": [
+            "T1003"
+        ],
+        "attack_tree_focus": "Credential Dumping",
+        "severity": "High",
+        "evidence": "Account 'SQLService' has weak credentials.",
+        "date_created": "2024-11-07T08:54:44.523150+00:00",
+        "validation": {
+            "4624": {
+                "description": "An account was successfully logged on.",
+                "count": 2306,
+                "criticality": "Low"
+            },
+            "4672": {
+                "description": "Special privileges assigned to new logon.",
+                "count": 2219,
+                "criticality": "Low"
+            },
+            "4688": {
+                "description": "A new process has been created.",
+                "count": 22,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            }
+        },
+        "score": 28.0,
+        "rank": 1
+    },
+    {
+        "id": "hypothesis-2",
+        "hypothesis": "Kerberos errors suggest time synchronization issues, which could be exploited for replay attacks.",
+        "mitre_techniques": [
+            "T1550"
+        ],
+        "attack_tree_focus": "Use Alternate Authentication Material",
+        "severity": "Medium",
+        "evidence": "Kerberos error indicates time skew.",
+        "date_created": "2024-11-07T08:54:44.523173+00:00",
+        "validation": {
+            "4768": {
+                "description": "A Kerberos authentication ticket (TGT) requested.",
+                "count": 18,
+                "criticality": "Medium"
+            },
+            "4769": {
+                "description": "A Kerberos service ticket was requested.",
+                "count": 41,
+                "criticality": "Low"
+            },
+            "4770": {
+                "description": "A Kerberos service ticket was renewed.",
+                "count": 6,
+                "criticality": "Low"
+            }
+        },
+        "score": 22.0,
+        "rank": 6
+    },
+    {
+        "id": "hypothesis-3",
+        "hypothesis": "The domain password policy allows weak passwords with a minimum length of 7 characters.",
+        "mitre_techniques": [
+            "T1201"
+        ],
+        "attack_tree_focus": "Password Policy Discovery",
+        "severity": "Medium",
+        "evidence": "Password Policy: Min Length = 7, Max Age = 41 days 23 hours 53 minutes.",
+        "date_created": "2024-11-07T08:54:44.523181+00:00",
+        "validation": {
+            "5379": {
+                "description": "User Account Management.",
+                "count": 233,
+                "criticality": "Medium"
+            }
+        },
+        "score": 23.0,
+        "rank": 4
+    },
+    {
+        "id": "hypothesis-4",
+        "hypothesis": "The account 'Guest' has never had a password set, indicating a potential vulnerability.",
+        "mitre_techniques": [
+            "T1078"
+        ],
+        "attack_tree_focus": "Valid Accounts",
+        "severity": "High",
+        "evidence": "Account 'Guest' has never had a password set.",
+        "date_created": "2024-11-07T08:54:44.523186+00:00",
+        "validation": {
+            "4624": {
+                "description": "An account was successfully logged on.",
+                "count": 2306,
+                "criticality": "Low"
+            },
+            "4634": {
+                "description": "An account was logged off.",
+                "count": 2203,
+                "criticality": "Low"
+            },
+            "4648": {
+                "description": "Logon attempt using explicit credentials.",
+                "count": 32,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            },
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            }
+        },
+        "score": 28.0,
+        "rank": 2
+    },
+    {
+        "id": "hypothesis-5",
+        "hypothesis": "Multiple accounts, such as Guest, lab.user1, lab.user2, PeterParker, brucewayne, dianaprince, misconfig, have never had passwords set, indicating a risk.",
+        "mitre_techniques": [
+            "T1087"
+        ],
+        "attack_tree_focus": "Account Discovery",
+        "severity": "Medium",
+        "evidence": "Several accounts have never had passwords set.",
+        "date_created": "2024-11-07T08:54:44.523190+00:00",
+        "validation": {
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            },
+            "4799": {
+                "description": "A security-enabled local group membership enumerated.",
+                "count": 104,
+                "criticality": "Low"
+            },
+            "4769": {
+                "description": "A Kerberos service ticket was requested.",
+                "count": 41,
+                "criticality": "Low"
+            },
+            "5379": {
+                "description": "User Account Management.",
+                "count": 233,
+                "criticality": "Medium"
+            }
+        },
+        "score": 20.0,
+        "rank": 7
+    },
+    {
+        "id": "hypothesis-6",
+        "hypothesis": "The system 'WS2K19-DC01' was targeted for a ZeroLogon attack, but the failure indicates it may be protected.",
+        "mitre_techniques": [
+            "T1203"
+        ],
+        "attack_tree_focus": "Exploitation for Client Execution",
+        "severity": "High",
+        "evidence": "System targeted for ZeroLogon vulnerability.",
+        "date_created": "2024-11-07T08:54:44.523194+00:00",
+        "validation": {
+            "4688": {
+                "description": "A new process has been created.",
+                "count": 22,
+                "criticality": "Low"
+            },
+            "4662": {
+                "description": "An operation was performed on an object.",
+                "count": 25,
+                "criticality": "Low"
+            }
+        },
+        "score": 22.0,
+        "rank": 5
+    },
+    {
+        "id": "hypothesis-7",
+        "hypothesis": "While SMBv1 is disabled on 'WS2K19-DC01', vulnerabilities may still exist.",
+        "mitre_techniques": [
+            "T1070"
+        ],
+        "attack_tree_focus": "Indicator Removal on Host",
+        "severity": "Medium",
+        "evidence": "SMBv1 disabled, but vulnerabilities detected in scan.",
+        "date_created": "2024-11-07T08:54:44.523196+00:00",
+        "validation": {
+            "4662": {
+                "description": "An operation was performed on an object.",
+                "count": 25,
+                "criticality": "Low"
+            },
+            "4688": {
+                "description": "A new process has been created.",
+                "count": 22,
+                "criticality": "Low"
+            }
+        },
+        "score": 15.0,
+        "rank": 13
+    },
+    {
+        "id": "hypothesis-8",
+        "hypothesis": "Multiple accounts with never-set passwords indicate potential enumeration.",
+        "mitre_techniques": [
+            "T1087"
+        ],
+        "attack_tree_focus": "Account Discovery",
+        "severity": "Medium",
+        "evidence": "Multiple accounts found without passwords.",
+        "date_created": "2024-11-07T08:54:44.523198+00:00",
+        "validation": {
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            },
+            "4799": {
+                "description": "A security-enabled local group membership enumerated.",
+                "count": 104,
+                "criticality": "Low"
+            },
+            "4769": {
+                "description": "A Kerberos service ticket was requested.",
+                "count": 41,
+                "criticality": "Low"
+            },
+            "5379": {
+                "description": "User Account Management.",
+                "count": 233,
+                "criticality": "Medium"
+            }
+        },
+        "score": 20.0,
+        "rank": 8
+    },
+    {
+        "id": "hypothesis-9",
+        "hypothesis": "The account 'SQLService' may be vulnerable to password spraying techniques.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "Recent password for 'SQLService' could be vulnerable to password spraying.",
+        "date_created": "2024-11-07T08:54:44.523201+00:00",
+        "validation": {
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            }
+        },
+        "score": 19.0,
+        "rank": 10
+    },
+    {
+        "id": "hypothesis-10",
+        "hypothesis": "With several user accounts having weak or no passwords, there's an increased risk of lateral movement.",
+        "mitre_techniques": [
+            "T1078"
+        ],
+        "attack_tree_focus": "Valid Accounts",
+        "severity": "High",
+        "evidence": "Multiple accounts with weak or no passwords increase lateral movement risk.",
+        "date_created": "2024-11-07T08:54:44.523203+00:00",
+        "validation": {
+            "4624": {
+                "description": "An account was successfully logged on.",
+                "count": 2306,
+                "criticality": "Low"
+            },
+            "4634": {
+                "description": "An account was logged off.",
+                "count": 2203,
+                "criticality": "Low"
+            },
+            "4648": {
+                "description": "Logon attempt using explicit credentials.",
+                "count": 32,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            },
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            }
+        },
+        "score": 28.0,
+        "rank": 3
+    },
+    {
+        "id": "hypothesis-11",
+        "hypothesis": "The absence of an account lockout threshold increases susceptibility to brute-force attacks.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "No account lockout threshold defined.",
+        "date_created": "2024-11-07T08:54:44.523205+00:00",
+        "validation": {
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            }
+        },
+        "score": 19.0,
+        "rank": 11
+    },
+    {
+        "id": "hypothesis-12",
+        "hypothesis": "Problems with LDAP connectivity may suggest misconfigurations.",
+        "mitre_techniques": [
+            "T1133"
+        ],
+        "attack_tree_focus": "External Remote Services",
+        "severity": "Medium",
+        "evidence": "Potential LDAP connectivity issues detected.",
+        "date_created": "2024-11-07T08:54:44.523213+00:00",
+        "validation": {
+            "4648": {
+                "description": "Logon attempt using explicit credentials.",
+                "count": 32,
+                "criticality": "Low"
+            },
+            "4624": {
+                "description": "An account was successfully logged on.",
+                "count": 2306,
+                "criticality": "Low"
+            }
+        },
+        "score": 20.0,
+        "rank": 9
+    },
+    {
+        "id": "hypothesis-13",
+        "hypothesis": "The account 'Administrator' has a weak or commonly used password.",
+        "mitre_techniques": [
+            "T1110"
+        ],
+        "attack_tree_focus": "Brute Force",
+        "severity": "Medium",
+        "evidence": "The account 'Administrator' has a weak password.",
+        "date_created": "2024-11-07T08:54:44.523216+00:00",
+        "validation": {
+            "4625": {
+                "description": "An account failed to log on.",
+                "count": 5,
+                "criticality": "Low"
+            },
+            "4776": {
+                "description": "Credentials validated on the domain controller.",
+                "count": 144,
+                "criticality": "Low"
+            }
+        },
+        "score": 19.0,
+        "rank": 12
+    }
+]

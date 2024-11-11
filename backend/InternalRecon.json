@@ -1,0 +1,89 @@
+{
+    "info": [
+        "Found AD domain: sjlab.local",
+        "Getting TGT for user",
+        "Connecting to LDAP server: ws2k19-dc01.sjlab.local",
+        "Found 1 domains",
+        "Found 1 domains in the forest",
+        "Found 3 computers",
+        "Connecting to LDAP server: ws2k19-dc01.sjlab.local",
+        "Found 15 users",
+        "Found 55 groups",
+        "Found 4 gpos",
+        "Found 6 ous",
+        "Found 22 containers",
+        "Found 0 trusts",
+        "Starting computer enumeration with 10 workers",
+        "Querying computer: SJ-21317503-W10.sjlab.local",
+        "Querying computer: SJ-21317503-W7.sjlab.local",
+        "Querying computer: WS2K19-DC01.sjlab.local",
+        "Done in 00M 28S"
+    ],
+    "warning": [
+        "Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: [Errno Connection error (ws2k19-dc01.sjlab.local:88)] [Errno -3] Temporary failure in name resolution"
+    ],
+    "error": [
+        "root:SAM hashes extraction for user WDAGUtilityAccount failed. The account doesn't have hash information."
+    ],
+    "smb": [
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)"
+        },
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)"
+        },
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Enumerated 14 local users: SJLAB"
+        },
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)"
+        },
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)"
+        },
+        {
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "details": "Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)"
+        }
+    ],
+    "attack_results": [
+        {
+            "attack_type": "ZEROLOGON",
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "result": "Attack failed. Target is probably patched."
+        },
+        {
+            "attack_type": "NOPAC",
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "result": "TGT with PAC size 1670"
+        },
+        {
+            "attack_type": "NOPAC",
+            "ip": "192.168.20.12",
+            "port": "445",
+            "hostname": "WS2K19-DC01",
+            "result": "TGT without PAC size 1670"
+        }
+    ]
+}

