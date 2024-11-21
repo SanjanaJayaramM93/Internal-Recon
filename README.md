@@ -1,3 +1,28 @@
+# Red Team Automated Hypothesis (RAH) Tool
+**Duration**: March 2024 - November 2024
+## 📋 Project Overview
+The Red Team Automated Hypothesis (RAH) Tool is a comprehensive solution designed for automating threat detection and hypothesis generation in an Active Directory (AD) environment. The tool integrates React.js for the frontend interface and Flask for the backend API, providing a seamless user experience for threat analysis and hypothesis management.
+
+## Technologies
+
+### Frontend: React.js
+### Backend: Flask (Python)
+### External Tools: BloodHound, CrackMapExec, Impacket, OpenVAS, MITRE ATT&CK
+### Other Technologies: Python, JSON, Windows Event Logs, Threat Hunting, Active Directory Enumeration
+
+## Project Structure
+### Frontend (React)
+The frontend of the RAH tool is built using React.js. It provides a user-friendly interface for interacting with the backend and visualizing the results of internal reconnaissance, hypothesis generation, and validation processes. The React app is designed to handle multiple modules, including hypothesis generation, ranking, and validation.
+
+Here is a screenshot of the frontend interface:
+![image](https://github.com/user-attachments/assets/f576fa44-b304-4620-a448-9b4d4934d6d5)
+
+
+### Backend (Flask)
+The backend is powered by Flask, which exposes several API endpoints that handle the logic for internal reconnaissance, hypothesis generation, and validation. The Flask API connects to external tools like BloodHound, CrackMapExec, and Impacket, as well as MITRE ATT&CK techniques for threat analysis.
+
+
+
 **Details of the files In the Repository**
 
 **1.Recon-internal module**
