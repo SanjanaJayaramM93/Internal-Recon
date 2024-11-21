@@ -21,6 +21,16 @@ Here is a screenshot of the frontend interface:
 ### Backend (Flask)
 The backend is powered by Flask, which exposes several API endpoints that handle the logic for internal reconnaissance, hypothesis generation, and validation. The Flask API connects to external tools like BloodHound, CrackMapExec, and Impacket, as well as MITRE ATT&CK techniques for threat analysis.
 
+### Sample Outputs
+Internal Reconnaissance results
+![image](https://github.com/user-attachments/assets/74e1541a-1d11-4f93-a1ba-98b70cdbd40f)
+Sample Hypothesis
+![image](https://github.com/user-attachments/assets/5f10bc0f-8d56-4a0f-a075-4270fe61c3d6)
+Sample Hypothesis validation
+![image](https://github.com/user-attachments/assets/d6887ecf-e3b1-45fd-a6b6-2862d13d28a7)
+Sample Ranking
+![image](https://github.com/user-attachments/assets/db26b127-b5b9-403c-86d1-c774f184111c)
+ 
 
 
 **Details of the files In the Repository**
