@@ -151,26 +151,27 @@ Each entry consists of-
 
 [BloodHound_AttackTree](https://github.com/SanjanaJayaramM93/Internal-Recon/tree/main/BloodHound_AttackTree)\- Files containing images and JSON files from bloodhound analysis.
 ## Installation & Setup
-Clone the repository:
+### Clone the repository:
 
-```bash
-git clone https://github.com/SanjanaJayaramM93/Internal-Recon.git
+    ```bash
+    git clone https://github.com/SanjanaJayaramM93/Internal-Recon.git
 
 ### Install the required Python packages:
 
-```bash
-pip install -r requirements.txt
+    ```bash
+    pip install -r requirements.txt
+
 ### Ensure external tools (Impacket, BloodHound, CrackMapExec) are installed on your machine.
 
 ### For the React frontend:
 
-Navigate to the frontend directory.
-Install the necessary npm packages:
-```bash
-npm install
+    Navigate to the frontend directory.
+    Install the necessary npm packages:
+    ```bash
+    npm install
 ### Start the React development server:
-```bash
-npm start
+    ```bash
+    npm start
 
 ## Usage
 Run InternalRecon.py to start internal reconnaissance.
