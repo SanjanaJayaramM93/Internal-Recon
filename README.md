@@ -153,12 +153,12 @@ Each entry consists of-
 ## Installation & Setup
 ### Clone the repository:
 
-    ```bash
+   ```bash
     git clone https://github.com/SanjanaJayaramM93/Internal-Recon.git
 
 ### Install the required Python packages:
 
-    ```bash
+   ```bash
     pip install -r requirements.txt
 
 ### Ensure external tools (Impacket, BloodHound, CrackMapExec) are installed on your machine.
@@ -167,10 +167,10 @@ Each entry consists of-
 
     Navigate to the frontend directory.
     Install the necessary npm packages:
-    ```bash
+   ```bash
     npm install
 ### Start the React development server:
-    ```bash
+   ```bash
     npm start
 
 ## Usage
