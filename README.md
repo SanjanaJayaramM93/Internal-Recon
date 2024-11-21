@@ -24,10 +24,14 @@ The backend is powered by Flask, which exposes several API endpoints that handle
 ### Sample Outputs
 Internal Reconnaissance results
 ![image](https://github.com/user-attachments/assets/74e1541a-1d11-4f93-a1ba-98b70cdbd40f)
+![image](https://github.com/user-attachments/assets/060798d4-0f21-45be-9061-882db2b7fdfb)
+
 Sample Hypothesis
-![image](https://github.com/user-attachments/assets/5f10bc0f-8d56-4a0f-a075-4270fe61c3d6)
+![image](https://github.com/user-attachments/assets/46645081-89cc-4da5-abb8-4a0397b7ea86)
+
 Sample Hypothesis validation
-![image](https://github.com/user-attachments/assets/d6887ecf-e3b1-45fd-a6b6-2862d13d28a7)
+![image](https://github.com/user-attachments/assets/7dd1a0fa-1044-4440-942b-e00d50e04415)
+
 Sample Ranking
 ![image](https://github.com/user-attachments/assets/db26b127-b5b9-403c-86d1-c774f184111c)
  
