@@ -150,3 +150,34 @@ Each entry consists of-
 [BloodHound_Enumeration](https://github.com/SanjanaJayaramM93/Internal-Recon/tree/main/BloodHound_Enumeration)\- JSON files from Bloodhound
 
 [BloodHound_AttackTree](https://github.com/SanjanaJayaramM93/Internal-Recon/tree/main/BloodHound_AttackTree)\- Files containing images and JSON files from bloodhound analysis.
+## Installation & Setup
+Clone the repository:
+
+```bash
+git clone https://github.com/SanjanaJayaramM93/Internal-Recon.git
+
+### Install the required Python packages:
+
+```bash
+pip install -r requirements.txt
+### Ensure external tools (Impacket, BloodHound, CrackMapExec) are installed on your machine.
+
+### For the React frontend:
+
+Navigate to the frontend directory.
+Install the necessary npm packages:
+```bash
+npm install
+### Start the React development server:
+```bash
+npm start
+
+## Usage
+Run InternalRecon.py to start internal reconnaissance.
+Use HypothesesGenerator.py to generate hypotheses based on the reconnaissance data.
+Validate the hypotheses with validation.py, using Windows Event Logs.
+Rank the hypotheses with Ranking.py to prioritize security risks.
+Access the frontend to view the results and interact with the tool.
+
+## Contributing
+Feel free to fork the repository and submit pull requests. Contributions to enhance the tool's functionality or fix bugs are welcome.
